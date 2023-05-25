@@ -1,8 +1,0 @@
-[
-{
-  "directory": "/Users/igorrogozin/Documents/ProjectsCPP/DZ-6/build",
-  "command": "/usr/bin/clang++   -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -o CMakeFiles/DZ-6.dir/main.cpp.o -c /Users/igorrogozin/Documents/ProjectsCPP/DZ-6/main.cpp",
-  "file": "/Users/igorrogozin/Documents/ProjectsCPP/DZ-6/main.cpp",
-  "output": "CMakeFiles/DZ-6.dir/main.cpp.o"
-}
-]
