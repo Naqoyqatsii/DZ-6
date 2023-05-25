@@ -1,4 +1,4 @@
-#include <unordered_map>
+#include <map>
 #include <utility>
 #include <iostream>
  
@@ -23,17 +23,18 @@ public:
      
     void set_value(int row, int col, int value = DEFAULT_VALUE) {
         
-        if (matrix.find(std::make_pair(row, col)) == matrix.end()) {
+        auto cell = std::make_pair(row, col);
+        if (matrix.find(cell) == matrix.end()) {
             
-            matrix[std::make_pair(row, col)] = {row, col, value};
+            matrix[cell] = {row, col, value};
             occupied_cells++;
         } else {
             
-            matrix[std::make_pair(row, col)].value = value;
+            matrix[cell].value = value;
         }
          
         if (value == DEFAULT_VALUE) {
-            matrix.erase(std::make_pair(row, col));
+            matrix.erase(cell);
             occupied_cells--;
         }
     }
@@ -62,7 +63,7 @@ public:
     }
  private:
    
-    std::unordered_map<std::pair<int, int>, cell_data> matrix;
+    std::map<std::pair<int, int>, cell_data> matrix;
     
     int occupied_cells;
 };
